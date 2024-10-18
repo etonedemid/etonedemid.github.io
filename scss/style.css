@@ -21,9 +21,9 @@ button {
   border: 1px solid rgb(255, 255, 255);
   background-color: rgba(0, 0, 0, 0.1);
   font-size: inherit;
-  color: whitesmoke;
+  color: black;
   font-family: Helvetica;
-  text-align: center;
+  text-align: whitesmoke;
 }
 
 button:hover {
@@ -40,10 +40,6 @@ input {
   color: whitesmoke;
   padding-left: 5px;
   transition: all 0.2s ease-in-out;
-}
-
-img {
-  text-align: left;
 }
 
 div {
