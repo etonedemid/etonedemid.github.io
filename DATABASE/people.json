@@ -180,6 +180,123 @@
         "secret": "Speaks four languages fluently"
     },
     {
+        "firstName": "Isabella",
+        "lastName": "Lee",
+        "age": 29,
+        "email": "isabella.lee@ct.us",
+        "jobTitle": "Event Planner",
+        "profilePicture": "https://randomuser.me/api/portraits/women/21.jpg",
+        "secret": "Has a secret talent for playing the violin"
+    },
+    {
+        "firstName": "Jackson",
+        "lastName": "Brown",
+        "age": 37,
+        "email": "jackson.brown@ct.us",
+        "jobTitle": "Architect",
+        "profilePicture": "https://randomuser.me/api/portraits/men/22.jpg",
+        "secret": "Designed a secret treehouse for his kids"
+    },
+    {
+        "firstName": "Chloe",
+        "lastName": "Scott",
+        "age": 34,
+        "email": "chloe.scott@ct.us",
+        "jobTitle": "Psychologist",
+        "profilePicture": "https://randomuser.me/api/portraits/women/23.jpg",
+        "secret": "Enjoys practicing calligraphy in her free time"
+    },
+    {
+        "firstName": "Lucas",
+        "lastName": "Allen",
+        "age": 40,
+        "email": "lucas.allen@ct.us",
+        "jobTitle": "Chef",
+        "profilePicture": "https://randomuser.me/api/portraits/men/24.jpg",
+        "secret": "Owns a collection of over 100 spices from around the world"
+    },
+    {
+        "firstName": "Grace",
+        "lastName": "Young",
+        "age": 28,
+        "email": "grace.young@ct.us",
+        "jobTitle": "Yoga Instructor",
+        "profilePicture": "https://randomuser.me/api/portraits/women/25.jpg",
+        "secret": "Once performed yoga on top of a mountain"
+    },
+    {
+        "firstName": "Henry",
+        "lastName": "Walker",
+        "age": 46,
+        "email": "henry.walker@ct.us",
+        "jobTitle": "Pilot",
+        "profilePicture": "https://randomuser.me/api/portraits/men/26.jpg",
+        "secret": "Dreams of flying his own hot air balloon one day"
+    },
+    {
+        "firstName": "Victoria",
+        "lastName": "Turner",
+        "age": 32,
+        "email": "victoria.turner@ct.us",
+        "jobTitle": "Photographer",
+        "profilePicture": "https://randomuser.me/api/portraits/women/27.jpg",
+        "secret": "Has taken a photo in every continent"
+    },
+    {
+        "firstName": "Oliver",
+        "lastName": "Hill",
+        "age": 36,
+        "email": "oliver.hill@ct.us",
+        "jobTitle": "Author",
+        "profilePicture": "https://randomuser.me/api/portraits/men/28.jpg",
+        "secret": "Wrote his first book in a cabin in the woods"
+    },
+    {
+        "firstName": "Lily",
+        "lastName": "Adams",
+        "age": 27,
+        "email": "lily.adams@ct.us",
+        "jobTitle": "Nutritionist",
+        "profilePicture": "https://randomuser.me/api/portraits/women/28.jpg",
+        "secret": "Runs a secret food blog"
+    },
+    {
+        "firstName": "Elijah",
+        "lastName": "Baker",
+        "age": 31,
+        "email": "elijah.baker@ct.us",
+        "jobTitle": "Electrician",
+        "profilePicture": "https://randomuser.me/api/portraits/men/29.jpg",
+        "secret": "Loves to create electronic gadgets for fun"
+    },
+    {
+        "firstName": "Zoe",
+        "lastName": "Nelson",
+        "age": 33,
+        "email": "zoe.nelson@ct.us",
+        "jobTitle": "Teacher",
+        "profilePicture": "https://randomuser.me/api/portraits/women/29.jpg",
+        "secret": "Has a secret garden"
+    },
+    {
+        "firstName": "Aaron",
+        "lastName": "Reed",
+        "age": 26,
+        "email": "aaron.reed@ct.us",
+        "jobTitle": "Fitness Trainer",
+        "profilePicture": "https://randomuser.me/api/portraits/men/30.jpg",
+        "secret": "Competes in bodybuilding competitions"
+    },
+    {
+        "firstName": "Madison",
+        "lastName": "Bell",
+        "age": 24,
+        "email": "madison.bell@ct.us",
+        "jobTitle": "Receptionist",
+        "profilePicture": "https://randomuser.me/api/portraits/women/30.jpg",
+        "secret": "Is secretly learning how to play the piano"
+    },
+    {
         "firstName": "Error",
         "lastName": "Error",
         "age": 0,
@@ -207,12 +324,21 @@
         "secret": "Is an expert in computer repairs"
     },
     {
-        "firstName": "Cassandra",
-        "lastName": "Reed",
-        "age": 31,
-        "email": "cassandra.reed@ct.us",
-        "jobTitle": "Data Scientist",
-        "profilePicture": "https://randomuser.me/api/portraits/women/24.jpg",
-        "secret": "Loves to solve complex puzzles"
+        "firstName": "Jordi",
+        "lastName": "Chin",
+        "age": 35,
+        "email": "jordi.chin@ct.us",
+        "jobTitle": "Fixer",
+        "profilePicture": "../img/jordi.jpg",
+        "secret": "Works as a freelance fixer for hire"
+    },
+    {
+        "firstName": "T-Bone",
+        "lastName": "",
+        "age": 1337,
+        "email": "",
+        "jobTitle": "",
+        "profilePicture": "../img/tbone.jpg",
+        "secret": "Suck my dick, chicago"
     }
 ]

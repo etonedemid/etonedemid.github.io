@@ -14,24 +14,26 @@
         }
         
         .scrollable-container {
-            max-height: 800px; /* Set a maximum height for the scrollable area */
-            overflow-y: auto;  /* Enable vertical scrolling */
-            border: 1px solid #000000; /* Add a border for visibility */
-            padding: 10px; /* Add padding */
-            background-color: #000000; /* Set a black background for the container */
-            display: grid; /* Use grid for layout */
-            grid-template-columns: repeat(auto-fill, minmax(1000px, 2fr)); /* Wider profiles */
-            gap: 15px; /* Space between items */
-        }
+    max-height: 800px;
+    overflow-y: auto;
+    border: 1px solid #000000;
+    padding: 10px;
+    background-color: #000000;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(800px, 1fr)); /* Wider columns */
+    gap: 15px;
+}
 
-        .person {
-            padding: 10px; /* Add padding to each person profile */
-            border: 1px solid #ddd; /* Add a border around each profile */
-            border-radius: 5px; /* Round the corners */
-            background-color: #000000; /* Dark background for each profile */
-            color: white; /* White text for better contrast */
-            box-sizing: border-box; /* Include padding and border in the width */
-        }
+.person {
+    padding: 20px; /* Add padding to each person profile */
+    border: 1px solid #ddd; /* Add a border around each profile */
+    border-radius: 5px; /* Round the corners */
+    background-color: #000000; /* Dark background for each profile */
+    color: white; /* White text for better contrast */
+    width: 90%; /* Increase the width of each profile card */
+    box-sizing: border-box; /* Include padding and border in the width */
+}
+
 
         .picture-container img {
             width: 100px; /* Fixed width for images */

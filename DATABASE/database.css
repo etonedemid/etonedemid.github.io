@@ -77,3 +77,14 @@ html, body {
         opacity: 1;
     }
 }
+
+.scrollable-container {
+    max-height: 800px;
+    overflow-y: auto;
+    border: 1px solid #000000;
+    padding: 10px;
+    background-color: #000000;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr)); /* Responsive columns */
+    gap: 15px;
+}
