@@ -7,29 +7,34 @@
     <link rel="stylesheet" href="scss/style.css">
 </head>
 <body>
-    <img src="img/ctoslogo.png" alt="logo" width="100">
+    <!-- Logo -->
+    <img src="img/ctoslogo.png" alt="logo" width="100" style="position: absolute; top: 10px; left: 10px;">
+
+    <!-- Login Form -->
+    <div class="login" id="login" 
+        style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+               border: 1px solid white; width: 300px; padding: 20px; background-color: black; border-radius: 8px;">
+
+        <h1 style="text-align: center; color: white;">Login</h1>
+        <p id="accessdenied" style="display: none; color: red; text-align: center;">Access denied</p>
+
+        <label for="logininput" style="display: block; color: white; margin-bottom: 5px;">Username:</label>
+        <input id="logininput" type="text" aria-label="Username" style="width: 100%; padding: 8px; margin-bottom: 10px;">
+
+        <label for="passwordinput" style="display: block; color: white; margin-bottom: 5px;">Password:</label>
+        <input id="passwordinput" type="password" aria-label="Password" style="width: 100%; padding: 8px; margin-bottom: 20px;">
+
+        <button onclick="login()" style="width: 100%; padding: 10px; color: whitesmoke; background-color: #333; border: none; cursor: pointer;">Log in</button>
+    </div>
+
+    <!-- Grid and Profile Display -->
+    <div class="grid" id="grid" style="display: none; text-align: center; padding: 20px;">
+        <img src="img/grid.gif" alt="grid" width="300" style="margin-bottom: 20px;">
+        <h2 style="color: white;">Welcome, <span id="usernameDisplay"></span>!</h2>
+        <div id="profileContainer" style="color: white;"></div>
+    </div>
+
+    <!-- Script -->
     <script src="js/script.js"></script>
-
-    <div class="login" id="login" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); border: 1px solid white; width:300px; height:350px; background-color: black;">
-
-        <H1>Login</H1>
-        
-        <p>User is not authorized</p>
-
-        <p id="accessdenied" style="display: none; color: red;">Access denied</p>
-        <p style="text-align: left; padding-left: 53px;">Login:</p>
-        <input id="logininput" type="text" value="" >
-        <br>
-        <p style="text-align: left; padding-left: 53px;">Password:</p>
-        <input type="password" id="passwordinput" value="">
-        <br>
-        <br>
-        <button onclick="login()" style="color: whitesmoke;">Log in</button>
-    </div>
-
-    <div class="grid" id="grid" style="display: none;">
-    <img src="img/grid.gif" alt="grid" width="300">
-    </div>
-</div>
 </body>
 </html>

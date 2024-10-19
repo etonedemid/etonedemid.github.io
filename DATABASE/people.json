@@ -1,0 +1,218 @@
+[
+    {
+        "firstName": "John",
+        "lastName": "Doe",
+        "age": 34,
+        "email": "jdoe34@ct.us",
+        "jobTitle": "Software Engineer",
+        "profilePicture": "https://randomuser.me/api/portraits/men/1.jpg",
+        "secret": "Loves to sky dive"
+    },
+    {
+        "firstName": "Jane",
+        "lastName": "Smith",
+        "age": 29,
+        "email": "jane.smith.designs@ct.us",
+        "jobTitle": "Graphic Designer",
+        "profilePicture": "https://randomuser.me/api/portraits/women/2.jpg",
+        "secret": "Hides a collection of rare coins"
+    },
+    {
+        "firstName": "Michael",
+        "lastName": "Johnson",
+        "age": 42,
+        "email": "michael.j@ct.us",
+        "jobTitle": "Project Manager",
+        "profilePicture": "https://randomuser.me/api/portraits/men/3.jpg",
+        "secret": "Is a secret agent"
+    },
+    {
+        "firstName": "Emily",
+        "lastName": "Davis",
+        "age": 27,
+        "email": "emilyd27@ct.us",
+        "jobTitle": "Marketing Specialist",
+        "profilePicture": "https://randomuser.me/api/portraits/women/4.jpg",
+        "secret": "Has a hidden talent for singing"
+    },
+    {
+        "firstName": "Chris",
+        "lastName": "Wilson",
+        "age": 31,
+        "email": "chriswrites@ct.us",
+        "jobTitle": "Data Analyst",
+        "profilePicture": "https://randomuser.me/api/portraits/men/5.jpg",
+        "secret": "Enjoys writing poetry"
+    },
+    {
+        "firstName": "Jessica",
+        "lastName": "Taylor",
+        "age": 25,
+        "email": "jessica.t@ct.us",
+        "jobTitle": "Web Developer",
+        "profilePicture": "https://randomuser.me/api/portraits/women/6.jpg",
+        "secret": "Collects vintage comic books"
+    },
+    {
+        "firstName": "Daniel",
+        "lastName": "Martinez",
+        "age": 39,
+        "email": "danny.m@ct.us",
+        "jobTitle": "Product Owner",
+        "profilePicture": "https://randomuser.me/api/portraits/men/7.jpg",
+        "secret": "Can solve a Rubik's cube in under a minute"
+    },
+    {
+        "firstName": "Sarah",
+        "lastName": "Harris",
+        "age": 28,
+        "email": "sarah.chess@ct.us",
+        "jobTitle": "Content Writer",
+        "profilePicture": "https://randomuser.me/api/portraits/women/8.jpg",
+        "secret": "Is a chess master"
+    },
+    {
+        "firstName": "Matthew",
+        "lastName": "Clark",
+        "age": 45,
+        "email": "matt.clarkux@ct.us",
+        "jobTitle": "UX Designer",
+        "profilePicture": "https://randomuser.me/api/portraits/men/9.jpg",
+        "secret": "Has hiked all the major mountains in the world"
+    },
+    {
+        "firstName": "Olivia",
+        "lastName": "Lewis",
+        "age": 22,
+        "email": "olivia.lewis.sm@ct.us",
+        "jobTitle": "Social Media Manager",
+        "profilePicture": "https://randomuser.me/api/portraits/women/10.jpg",
+        "secret": "Has a pet tarantula"
+    },
+    {
+        "firstName": "Ryan",
+        "lastName": "Garcia",
+        "age": 30,
+        "email": "ryan.guitar@ct.us",
+        "jobTitle": "Systems Analyst",
+        "profilePicture": "https://randomuser.me/api/portraits/men/11.jpg",
+        "secret": "Plays the guitar in a band"
+    },
+    {
+        "firstName": "Sophia",
+        "lastName": "Martinez",
+        "age": 24,
+        "email": "sophia.research@ct.us",
+        "jobTitle": "Research Scientist",
+        "profilePicture": "https://randomuser.me/api/portraits/women/12.jpg",
+        "secret": "Can juggle five balls at once"
+    },
+    {
+        "firstName": "Liam",
+        "lastName": "Miller",
+        "age": 38,
+        "email": "liam.miller.magic@ct.us",
+        "jobTitle": "Financial Analyst",
+        "profilePicture": "https://randomuser.me/api/portraits/men/13.jpg",
+        "secret": "Is an expert in magic tricks"
+    },
+    {
+        "firstName": "Ava",
+        "lastName": "Hernandez",
+        "age": 26,
+        "email": "ava.dance@ct.us",
+        "jobTitle": "SEO Specialist",
+        "profilePicture": "https://randomuser.me/api/portraits/women/14.jpg",
+        "secret": "Is a competitive dancer"
+    },
+    {
+        "firstName": "Noah",
+        "lastName": "King",
+        "age": 33,
+        "email": "noah.wood@ct.us",
+        "jobTitle": "Product Designer",
+        "profilePicture": "https://randomuser.me/api/portraits/men/15.jpg",
+        "secret": "Enjoys woodworking as a hobby"
+    },
+    {
+        "firstName": "Ella",
+        "lastName": "White",
+        "age": 31,
+        "email": "ella.marathon@ct.us",
+        "jobTitle": "Nurse",
+        "profilePicture": "https://randomuser.me/api/portraits/women/16.jpg",
+        "secret": "Has run a marathon in every state"
+    },
+    {
+        "firstName": "Ethan",
+        "lastName": "Thompson",
+        "age": 29,
+        "email": "ethan.scuba@ct.us",
+        "jobTitle": "Mechanical Engineer",
+        "profilePicture": "https://randomuser.me/api/portraits/men/17.jpg",
+        "secret": "Is a certified scuba diver"
+    },
+    {
+        "firstName": "Mia",
+        "lastName": "Anderson",
+        "age": 27,
+        "email": "mia.baker@ct.us",
+        "jobTitle": "HR Manager",
+        "profilePicture": "https://randomuser.me/api/portraits/women/18.jpg",
+        "secret": "Has a knack for baking elaborate cakes"
+    },
+    {
+        "firstName": "James",
+        "lastName": "Thomas",
+        "age": 44,
+        "email": "james.travel@ct.us",
+        "jobTitle": "Business Analyst",
+        "profilePicture": "https://randomuser.me/api/portraits/men/19.jpg",
+        "secret": "Loves to travel and explore different cultures"
+    },
+    {
+        "firstName": "Avery",
+        "lastName": "Jackson",
+        "age": 23,
+        "email": "avery.polyglot@ct.us",
+        "jobTitle": "Content Creator",
+        "profilePicture": "https://randomuser.me/api/portraits/women/20.jpg",
+        "secret": "Speaks four languages fluently"
+    },
+    {
+        "firstName": "Error",
+        "lastName": "Error",
+        "age": 0,
+        "email": "Error",
+        "jobTitle": "Error",
+        "profilePicture": "../img/aidenpearce.jpg",
+        "secret": "Error"
+    },
+    {
+        "firstName": "Clara",
+        "lastName": "Lille",
+        "age": 27,
+        "email": "clara.lille@ct.us",
+        "jobTitle": "Street Artist",
+        "profilePicture": "../img/Clara.jpg",
+        "secret": "Creates graffiti art to spread social messages"
+    },
+    {
+        "firstName": "Tobias",
+        "lastName": "Frisk",
+        "age": 32,
+        "email": "tobias.frisk@ct.us",
+        "jobTitle": "Technician",
+        "profilePicture": "https://randomuser.me/api/portraits/men/23.jpg",
+        "secret": "Is an expert in computer repairs"
+    },
+    {
+        "firstName": "Cassandra",
+        "lastName": "Reed",
+        "age": 31,
+        "email": "cassandra.reed@ct.us",
+        "jobTitle": "Data Scientist",
+        "profilePicture": "https://randomuser.me/api/portraits/women/24.jpg",
+        "secret": "Loves to solve complex puzzles"
+    }
+]

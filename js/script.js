@@ -9,7 +9,6 @@ const logins = {
 };
 
 // Function to get the value of a specific cookie
-// Function to get the value of a specific cookie
 function getCookieValue(name) {
     const value = document.cookie
         .split("; ")
@@ -23,19 +22,22 @@ function displayUsername() {
     const username = getCookieValue("username");
     if (username) {
         document.querySelector("#usernameDisplay").textContent = username;
+        displayUserProfile(username); // Display the user's profile data
     }
 }
 
 // Call the function to display the username when the page loads
 document.addEventListener("DOMContentLoaded", displayUsername);
 
-
 // Redirect to database if logged in
+
+/*
 if (getCookieValue("username") && document.title === "Log in") {
     const username = getCookieValue("username");
     console.log(username);
     window.location.href = "../database.html";
 }
+*/
 
 // Login function
 function login() {
@@ -60,7 +62,7 @@ function loginsuccess(username) {
 // Redirect function
 function redirect(WhereTo = "database") {
     const pageMap = {
-        "database": "../database.html",
+        "database": "../DATABASE/database.html",
         "profile": "../profile.html"
     };
     window.location.href = pageMap[WhereTo] || pageMap["database"];

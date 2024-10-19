@@ -1,0 +1,79 @@
+/* Basic reset */
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #000000; /* Dark background */
+    color: white; /* White text */
+    overflow: hidden;
+}
+
+/* HUD overlay styling */
+.hud-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 90%;
+    text-align: left;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+/* Individual person styling */
+.person {
+    background-color: rgb(0, 0, 0, 0.7);
+    border: 1px solid #FFFFFF; /* Blue border for profiler look */
+    border-radius: 2px;
+    padding: 20px;
+    animation: fadeIn 0.5s ease-in-out;
+    text-align: center;
+    width: 30%;
+    box-sizing: border-box;
+    margin: 0 auto;
+}
+
+/* Profile picture container with rotation */
+.picture-container {
+    position: relative;
+    width: 70px; /* Fixed width for the picture */
+    height: 70px; /* Fixed height for the picture */
+    margin: 0 auto; /* Center the image */
+    transform: rotate(45deg); /* Rotate square */
+    overflow: hidden; /* Hide overflow */
+    border: #FFFFFF 1px solid; /* Add white border */
+    margin-left: 10px;
+    
+}
+
+/* Profile image styling */
+.picture-container img {
+    width: 150px; /* Image takes full width of the container */
+    height: 150px; /* Maintain aspect ratio */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+/* Profile text styling */
+.person p {
+    margin: 5px 0;
+}
+
+/* Special info styling */
+.person p strong {
+    margin-left: 20px;
+    color: #75dfff; /* Special information in blue */
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
