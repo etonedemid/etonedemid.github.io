@@ -2,7 +2,7 @@ console.log("suit");
 
 // Hardcoded login credentials
 const logins = {
-    "tuxedo": "tuxedo",
+    "tuxedo": "morty",
     "admin": "admin",
     "yarik": "martina",
     "hehe": "haha"
