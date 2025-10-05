@@ -1,146 +1,250 @@
-/* Global Styles */
-body {
-  background-color: #1f1f1f;
-  background-image: 
-    linear-gradient(45deg, #ffffff 25%, transparent 25%, transparent 75%, #242424 75%, #242424),
-    linear-gradient(45deg, #242424 25%, #1f1f1f 25%, #747474 75%, #242424 75%, #242424);
-  background-size: 50px 50px;
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  color: #f0f0f0;
-  scroll-behavior: smooth;
+:root{
+  --bg-1: #2a0000; /* deep red */
+  --bg-2: #120000; /* near-black red */
+  --card: rgba(255,255,255,0.02);
+  --accent: #610003; /* warm red accent */
+  --muted: #920000;
+  --glass: rgba(255,255,255,0.03);
+  --stripe: rgba(255,255,255,0.02);
 }
 
-a {
-  color: #19ffe0;
-  text-decoration: none;
+/* Reset & base */
+*{ box-sizing: border-box }
+html,body{ height:100%; margin:0 }
+body{
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  color:#202020; /* make text black site-wide */
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  /* explicit checkerboard: two identical column gradients offset by half a tile */
+  background:
+    linear-gradient(90deg, rgba(0,0,0,0.06) 50%, rgba(255,255,255,0.03) 50%) 0 0/40px 40px,
+    linear-gradient(90deg, rgba(0,0,0,0.06) 50%, rgba(255,255,255,0.03) 50%) 20px 20px/40px 40px,
+    radial-gradient(800px 400px at 10% 10%, rgba(255,90,95,0.035), transparent 8%) center/600px 600px no-repeat,
+    linear-gradient(180deg, var(--bg-1), var(--bg-2)) no-repeat;
 }
 
-a:hover {
-  color: #ffffff;
-}
-
-a:focus {
-  outline: 2px dashed #19ffe0;
-  outline-offset: 4px;
-}
-
-/* Header Styles */
-header {
-  background-color: #333;
-  padding: 1em 0;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-}
-
-nav ul {
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  margin: 0;
-  padding: 0;
-  flex-wrap: wrap; /* For responsiveness */
-}
-
-nav ul li {
-  margin: 0 15px;
-}
-
-nav ul li a {
-  color: #f0f0f0;
-  text-decoration: none;
-  transition: color 0.3s, text-decoration 0.3s;
-}
-
-nav ul li a:hover {
-  color: #19ffe0;
-  text-decoration: underline;
-}
-
-/* Section Styles */
-section {
-  padding: 50px;
-  text-align: center;
-}
-
-@media (max-width: 768px) {
-  nav ul {
-    flex-direction: column;
+  /* Countdown page decorations and components (merged) */
+  /* Decorative question-mark layers - fixed so they do not clip */
+  body::before,
+  body::after {
+    content: "#FREETRANSIT                    nigga_cat                     :)                ";
+    position: fixed;
+    top: 0;
+    left: -50vw;
+    width: 200vw;
+    height: 100vh;
+    display: flex;
     align-items: center;
+    white-space: nowrap;
+    pointer-events: none;
+    transform: skewX(-25deg);
+    z-index: 0;
   }
-  nav ul li {
-    margin: 10px 0;
+
+  body::before {
+    color: rgba(255,90,95,0.06);
+    font-size: 56px;
+    letter-spacing: 24px;
+    mix-blend-mode: overlay;
+    animation: q-slide 14s linear infinite;
+    top: -10vh;
   }
-  .project {
-    width: 90%;
-    margin: 10px auto;
+
+  body::after {
+    color: rgba(255,90,95,0.04);
+    font-size: 42px;
+    letter-spacing: 18px;
+    mix-blend-mode: overlay;
+    animation: q-slide 18s linear reverse infinite;
+    top: 40vh;
   }
+
+  @keyframes q-slide {
+    0% { transform: translateX(-33%) skewX(-25deg) }
+    100% { transform: translateX(33%) skewX(-25deg) }
+  }
+
+  .card {
+    width: min(760px, 92%);
+    background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+    border-radius: 14px;
+    padding: 28px 32px;
+    box-shadow: 0 10px 40px rgba(2,6,23,0.6), inset 0 1px 0 rgba(255,255,255,0.02);
+    position: relative;
+    z-index: 2;
+    backdrop-filter: blur(6px) saturate(120%);
+    text-align: center;
+  }
+  .card{ margin: 0 auto }
+
+  #title {
+    margin: 0 0 14px 0;
+    font-size: 20px;
+    color: var(--accent);
+  }
+
+  .countdown {
+    display: flex;
+    gap: 18px;
+    justify-content: center;
+    margin: 22px 0;
+  }
+
+  .time {
+    background: rgba(0, 0, 0, 0.445);
+    padding: 16px 18px;
+    border-radius: 10px;
+    min-width: 90px;
+    box-shadow: 0 4px 14px rgba(2,6,23,0.05);
+  }
+
+  .time span {
+    display: block;
+    font-size: 28px;
+    font-weight: 700;
+    color: #ff0000;
+    text-align: center;
+  }
+
+  .time small {
+    display: block;
+    margin-top: 6px;
+    font-size: 11px;
+    color: var(--muted);
+  }
+
+  .note {
+    color: var(--muted);
+    margin-top: 12px;
+  }
+
+  @media (max-width:520px) {
+    .countdown { flex-direction: column; gap: 10px }
+    body::before, body::after { font-size: 32px; letter-spacing: 12px }
+  }
+
+
+/* Page container */
+.container{
+  max-width:1200px;
+  margin:32px auto;
+  padding:24px;
+  display:flex;
+  gap:20px;
+  flex-wrap:wrap;
+  justify-content:center;
+  align-items:center; /* center vertically where possible */
 }
 
-/* Project Styles */
-.project {
-  display: inline-block;
-  margin: 20px;
-  text-align: left;
-  background: #2b2b2b;
-  padding: 20px;
-  border-radius: 10px;
-  width: 300px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  transition: box-shadow 0.3s, transform 0.3s;
+/* Generic wrapper used by pages (centers everything in viewport) */
+.wrap{
+  min-height:100vh; /* fill viewport */
+  display:flex;
+  flex-direction:column;
+  justify-content:center; /* vertical center */
+  align-items:center;     /* horizontal center */
+  gap:18px;
+  padding: 24px;
 }
 
-.project:hover {
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-  transform: translateY(-5px);
-}
-
-.project img {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-  border-radius: 10px;
-}
-
-/* Footer Styles */
-footer {
-  background-color: #333;
-  padding: 1em;
+/* typography defaults: make headings and body text dark */
+h1, h2, h3, h4, h5, h6, p, small, a, .project p, footer, .note {
+  color: #000000;
   text-align: center;
-  color: #888;
 }
 
-/* Additional Responsive Styles */
-@media (max-width: 600px) {
-  section {
-    padding: 30px 20px;
-  }
+h1{ text-align:center; margin:18px 0 6px; font-size:36px }
+h2{ text-align:center; margin:6px 0 18px; font-size:22px }
+
+/* Project card modern layout */
+.project{
+  flex: 1 1 300px;
+  max-width:320px;
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  border-radius:12px;
+  padding:12px;
+  box-shadow: 0 8px 28px rgba(2,6,23,0.6);
+  transition: transform .25s ease, box-shadow .25s ease;
+  text-align:center;
+  overflow:hidden;
+}
+.project:hover{ transform: translateY(-8px); box-shadow: 0 14px 48px rgba(2,6,23,0.7) }
+
+.project img{ width:100%; height:180px; object-fit:cover; border-radius:8px }
+.hero{ width:100%; display:flex; justify-content:center; margin-bottom:8px }
+.hero-img{ max-width:260px; width:60%; height:auto; display:block }
+.project h3{ margin:10px 0 6px; font-size:18px }
+.project p{ margin:0 0 8px; color:var(--muted); font-size:14px }
+
+/* Floating big hello for index page */
+.float-hello{
+  position:fixed;
+  left:50%;
+  top:calc(50% - 50px);
+  transform:translate(-50%,-50%);
+  font-size:clamp(48px, 12vw, 160px);
+  font-weight:800;
+  color:#000;
+  background: transparent; /* no panel */
+  padding: 0; /* no extra spacing */
+  border-radius: 0;
+  box-shadow: none;
+  text-shadow: none;
+  z-index:55;
+  display:inline-block;
+  animation: floaty 4s ease-in-out infinite;
 }
 
-/* Hover Effects for Links */
-a:hover {
-  color: #ffffff;
-  transition: color 0.3s;
+@keyframes floaty{
+  0%{ transform: translate(-50%,-52%) }
+  50%{ transform: translate(-50%,-48%) }
+  100%{ transform: translate(-50%,-52%) }
 }
 
-/* Focus States for Accessibility */
-a:focus {
-  outline: 2px dashed #19ffe0;
-  outline-offset: 4px;
+@media (prefers-reduced-motion: reduce){
+  .float-hello, body::before, body::after { animation: none !important }
 }
 
-/* Header Shadow */
-header {
-  background-color: #333;
-  padding: 1em 0;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+/* Projects container: use grid to allow staggered offsets */
+.projects{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+  width:100%;
 }
 
-/* Checkerboard Background */
-body {
-  background-color: #1f1f1f;
-  background-image: 
-    linear-gradient(45deg, #242424 25%, transparent 25%, transparent 75%, #242424 75%, #242424),
-    linear-gradient(45deg, #242424 25%, #1f1f1f 25%, #1f1f1f 75%, #242424 75%, #242424);
-  background-size: 50px 50px;
+/* Move every second item up slightly to create a brick/stepped layout */
+.projects .project:nth-child(2n){
+  transform: translateY(-26px);
+}
+
+/* Ensure hover doesn't add extra transform on staggered items */
+.projects .project:nth-child(2n):hover{ transform: translateY(-34px) }
+
+/* Contact section */
+section + h2{ margin-top:34px }
+
+.contact a{ color:inherit; font-weight:600 }
+
+/* Footer */
+footer{ margin-top:36px; padding:18px 8px; text-align:center; color: #97a2b0; font-size:13px }
+
+/* Accessibility & links */
+a{ color:inherit; text-decoration:none }
+a:hover{ text-decoration:underline }
+a:focus{ outline:2px dashed #000; outline-offset:4px }
+
+/* Responsive tweaks */
+@media (max-width:900px){
+  .container{ padding:18px }
+  h1{ font-size:28px }
+}
+
+@media (max-width:520px){
+  .container{ gap:12px }
+  .project{ max-width:100%; flex-basis:100% }
+  h1{ font-size:22px }
+  /* Reset stagger on small screens so layout stacks neatly */
+  .projects .project, .projects .project:nth-child(2n){ transform: none }
 }

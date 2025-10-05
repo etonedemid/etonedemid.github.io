@@ -1,0 +1,137 @@
+
+:root {
+  --bg-1: #2a0000;
+  --bg-2: #120000;
+  --accent: #ff5a5f;
+  --muted: #caa3a3;
+  --card: rgba(255,255,255,0.02);
+  --stripe: rgba(255,255,255,0.02);
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  color: var(--accent);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /* explicit checkerboard: two identical column gradients offset by half a tile */
+  background:
+    linear-gradient(90deg, rgba(0,0,0,0.06) 50%, rgba(255,255,255,0.03) 50%) 0 0/40px 40px,
+    linear-gradient(90deg, rgba(0,0,0,0.06) 50%, rgba(255,255,255,0.03) 50%) 20px 20px/40px 40px,
+    radial-gradient(800px 400px at 10% 10%, rgba(255,90,95,0.035), transparent 8%) center/600px 600px no-repeat,
+    linear-gradient(180deg, var(--bg-1), var(--bg-2)) no-repeat;
+}
+
+
+.wrap {
+  min-height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  position: relative;
+  /* allow decorative layers to extend beyond the card */
+  overflow: visible;
+}
+
+/* Animated moving question marks layer (two subtle layers for depth) */
+/* Decorative layers: fixed to viewport so they aren't clipped by containers */
+body::before,
+body::after {
+  content: "? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ?";
+  position: fixed;
+  top: 0;
+  left: -50vw;
+  width: 200vw; /* very wide to cover animated movement */
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  pointer-events: none;
+  transform: skewX(-25deg);
+  z-index: 0;
+}
+
+body::before {
+  color: rgba(255,90,95,0.06);
+  font-size: 56px;
+  letter-spacing: 24px;
+  mix-blend-mode: overlay;
+  animation: q-slide 14s linear infinite;
+  top: -10vh;
+}
+
+body::after {
+  color: rgba(255,90,95,0.04);
+  font-size: 42px;
+  letter-spacing: 18px;
+  mix-blend-mode: overlay;
+  animation: q-slide 18s linear reverse infinite;
+  top: 40vh;
+}
+
+@keyframes q-slide {
+  0% { transform: translateX(-33%) skewX(-25deg) }
+  100% { transform: translateX(33%) skewX(-25deg) }
+}
+
+#title {
+  margin: 0 0 14px 0;
+  font-size: 20px;
+  color: var(--accent);
+}
+
+.countdown {
+  display: flex;
+  gap: 18px;
+  justify-content: center;
+  margin: 22px 0;
+}
+
+.time {
+  background: rgba(0,0,0,0.28);
+  padding: 16px 18px;
+  border-radius: 10px;
+  min-width: 90px;
+  box-shadow: 0 4px 14px rgba(2,6,23,0.5);
+  text-align: center; /* center numbers and labels */
+}
+
+.time span {
+  display: block;
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--accent);
+  text-align: center;
+}
+
+.time small {
+  display: block;
+  margin-top: 6px;
+  font-size: 11px;
+  color: var(--accent);
+  text-align: center;
+}
+
+.note {
+  color: var(--accent);
+  margin-top: 12px;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+a:hover { text-decoration: underline }
+
+@media (max-width:520px) {
+  .countdown { flex-direction: column; gap: 10px }
+  body::before, body::after { font-size: 32px; letter-spacing: 12px }
+}
+
+
